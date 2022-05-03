@@ -32,7 +32,7 @@ namespace ConcessionariaOOP.Classes
       public DateTime GetAno(){
           return Ano;
       }
-      public void Set(DateTime Ano){
+      public void SetAno(DateTime Ano){
           Ano = Ano;
       }
       public int GetKilometragem(){
@@ -50,7 +50,7 @@ namespace ConcessionariaOOP.Classes
       public double GetValor(){
           return Valor;
       }
-      public void SetValor(){
+      public void SetValor(double valor){
           Valor = Valor;
       }
 

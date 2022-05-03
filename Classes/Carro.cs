@@ -19,7 +19,7 @@ namespace ConcessionariaOOP.Classes
         public string GetCombustivel(){
             return Combustivel;
         }
-        public void SetCombustivel(){
+        public void SetCombustivel(string combustivel){
             Combustivel = Combustivel;
         }
     }
