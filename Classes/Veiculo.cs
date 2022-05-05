@@ -54,5 +54,9 @@ namespace ConcessionariaOOP.Classes
           Valor = Valor;
       }
 
+      public virtual double calcValor(){
+          return 0;
+      }
+
     }
 }

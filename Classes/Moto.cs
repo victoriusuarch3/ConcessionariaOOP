@@ -5,12 +5,12 @@ namespace ConcessionariaOOP.Classes
         protected int Cilindrada {get; set;}
         protected string Partida {get; set;}
 
-        public Moto(string marca, string modelo, DateTime ano, int kilometragem, string cor, double valor, int cilindrada, string partida) 
-        : base (marca, modelo, ano, kilometragem, cor, valor)
+        public Moto(string marca, string modelo, DateTime ano, int kilometragem, string cor, double valor, int cilindrada, string partida)
         
-        {
-            SetCilindrada(cilindrada);
-            SetPartida(partida);
+        : base (marca, modelo, ano, kilometragem, cor, valor)
+        {     
+            Cilindrada = cilindrada;
+            Partida = partida;
         }
 
         public int GetCilindrada(){
@@ -26,14 +26,16 @@ namespace ConcessionariaOOP.Classes
             Partida = Partida;
         }
 
-        public void ValorCilindrada()
+        public override double calcValor()
         {
-            var ValorMoto = (Cilindrada * 50);
-            Valor = ValorMoto;
+            var valorMoto = (Cilindrada * 50);
+            double valor = valorMoto;
             if (Partida == "Eletrônica")
             {
-                Valor = Valor * 1.1;
+                valor = valor * 1.1;
             }
+
+            return valor;
         }
 
     }
