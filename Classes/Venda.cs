@@ -45,5 +45,13 @@ namespace ConcessionariaOOP.Classes
        public void SetValorFinal(double ValorFinal){
            ValorFinal = ValorFinal;
        }
+
+       public void desconto()
+       {
+           if(Vendedor.GetCargo() == "Gerente")
+           {
+               ValorFinal = ValorFinal * 0.95;
+           }
+       }
     }
 }

@@ -1,11 +1,13 @@
 namespace ConcessionariaOOP.Classes
 {
-    public class Cliente
+    public class Cliente : Pessoa
     {
         protected string Email {get; set;}
         protected string Telefone {get; set;}
 
-        public Cliente(string email, string telefone){
+        public Cliente(string nome, string cpf, DateTime datanascimento, string email, string telefone) 
+        : base(nome, cpf, datanascimento)
+        {
             SetEmail(email);
             SetTelefone(telefone);
         }

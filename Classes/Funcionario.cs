@@ -1,10 +1,12 @@
 namespace ConcessionariaOOP.Classes
 {
-    public class Funcionario
+    public class Funcionario : Pessoa
     {
         protected string Cargo {get; set;}
 
-        public Funcionario(string cargo){
+        public Funcionario (string nome, string cpf, DateTime datanascimento, string cargo) 
+        : base (nome, cpf, datanascimento)
+        {
             SetCargo(cargo);
         }
         public string GetCargo(){
