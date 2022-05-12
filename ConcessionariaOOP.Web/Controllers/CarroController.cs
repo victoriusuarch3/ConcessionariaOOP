@@ -1,16 +1,19 @@
 using Microsoft.AspNetCore.Mvc;
+using ConcessionariaOOP.Classes;
+
 namespace ConcessionariaOOP.Web.Controllers
+
 {
     [ApiController]
-    [Route("ControllerConcessionaria")]
-    public class ConcessionariaApi : ControllerBase
+    [Route("[Controller]")]
+    public class CarroController : ControllerBase
     {
         public static List<Carro> CarroDaClasse {get; set;} = new List<Carro>();
 
-        [HttpGet("Carro")]
-        public IActionResult Carro()
+        [HttpPost("Carro")]
+        public IActionResult Carro(Carro carro)
         {
-            CarroDaClasse.Add(Carro);
+            CarroDaClasse.Add(carro);
             return Ok(CarroDaClasse);
         }
     }
