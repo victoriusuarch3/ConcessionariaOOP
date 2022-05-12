@@ -27,14 +27,13 @@ namespace ConcessionariaOOP.Classes
         }
         public override double calcValor()
         {
-            var valorCarro = (Modelo);
-            double valor = Convert.ToDouble(valorCarro);
-            if (Modelo == "Automáticos")
+            
+            if (TransmissaoAutomatica)
             {
-                valor = valor * 1.1;
+                Valor = Valor * 1.1;
             }
 
-            return valor;
+            return Valor;
         }
 
 
