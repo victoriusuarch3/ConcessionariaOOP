@@ -26,10 +26,10 @@ namespace ConcessionariaOOP.Classes
             Partida = Partida;
         }
 
+       
         public override double calcValor()
-        {
-            var valorMoto = (Cilindrada * 50);
-            double valor = valorMoto;
+        {   
+
             if (Partida == "Eletrônica")
             {
                 valor = valor * 1.1;
