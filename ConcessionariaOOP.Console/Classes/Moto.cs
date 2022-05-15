@@ -27,9 +27,9 @@ namespace ConcessionariaOOP.Classes
         }
 
        
-        public override double calcValor()
+        public override double calcValor(double valor)
         {   
-
+            
             if (Partida == "Eletrônica")
             {
                 valor = valor * 1.1;

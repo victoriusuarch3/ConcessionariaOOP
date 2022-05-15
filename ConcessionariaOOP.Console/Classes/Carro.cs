@@ -2,9 +2,14 @@ namespace ConcessionariaOOP.Classes
 {
     public class Carro : Veiculo
     {
-        protected bool TransmissaoAutomatica {get; set;}
-        protected string Combustivel {get; set;}
+        public bool TransmissaoAutomatica {get; set;}
+        public string Combustivel {get; set;}
 
+        public Carro()
+        {
+
+        }
+        
         public Carro(string marca, string modelo, DateTime ano, int kilometragem, string cor, double valor, bool transmissaoautomatica, string combustivel)
             : base (marca, modelo, ano, kilometragem, cor, valor)
         
@@ -25,7 +30,7 @@ namespace ConcessionariaOOP.Classes
         public void SetCombustivel(string combustivel){
             Combustivel = Combustivel;
         }
-        public override double calcValor()
+        public override double calcValor(double valor)
         {
             
             if (TransmissaoAutomatica)

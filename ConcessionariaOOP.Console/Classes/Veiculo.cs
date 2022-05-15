@@ -2,13 +2,17 @@ namespace ConcessionariaOOP.Classes
 {
     public class Veiculo
     {
-      protected string Marca {get; set;}
-      protected string Modelo {get; set;}
-      protected DateTime Ano {get; set;}
-      protected int Kilometragem {get; set;}
-      protected string Cor {get; set;}
-      protected double Valor {get; set;}  
+      public string Marca {get; set;}
+      public string Modelo {get; set;}
+      public DateTime Ano {get; set;}
+      public int Kilometragem {get; set;}
+      public string Cor {get; set;}
+      public double Valor {get; set;}  
 
+        public Veiculo()
+        {
+
+        }
       public Veiculo(string marca, string modelo, DateTime ano, int kilometragem, string cor, double valor){
           SetMarca(marca);
           SetModelo(modelo);
@@ -51,10 +55,10 @@ namespace ConcessionariaOOP.Classes
           return Valor;
       }
       public void SetValor(double valor){
-          Valor = Valor;
+          Valor = valor;
       }
 
-      public virtual double calcValor(){
+      public virtual double calcValor(double valor){
           return 0;
       }
 
