@@ -58,8 +58,19 @@ namespace ConcessionariaOOP.Classes
           Valor = valor;
       }
 
-      public virtual double calcValor(double valor){
+      public virtual double calcValor(double valor)
+      {
           return 0;
+      }
+
+      public bool ValidarAno(datetime ano)
+      {
+          if(ano > Datetime.Parse("01/01/2004") && ano < DateTime.Now)
+          {
+              return true;
+          }
+          throw new ErroException("Error entrada ano");
+          
       }
 
     }
